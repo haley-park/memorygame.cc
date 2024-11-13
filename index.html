@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenge your memory with our scientifically designed memory test game. Train your brain with increasing difficulty levels and track your progress.">
+    <title>Memory Test - Challenge Your Brain with Number Memory Training</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #3b82f6;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --accent-color: #ec4899;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin: 25px 0 15px;
+            color: var(--secondary-color);
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            aspect-ratio: 16/9;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scoring-table {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scoring-table th, .scoring-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .scoring-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .benefits {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .benefits li {
+            margin: 15px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits li::before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .tips-list {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Memory Test Challenge</h1>
+            <p class="hero-subtitle">Push your memory limits with our scientifically designed number sequence game</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="game">
+            <div class="container">
+                <h2>Test Your Memory Now</h2>
+                <div class="game-container">
+                    <iframe src="https://memorytest.io/game.html" class="game-frame" title="Memory Test Game"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2>Game Features</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>Progressive Challenge</h3>
+                        <p>Start with single digits and progress to 20-digit sequences, testing the limits of your working memory.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Timed Challenges</h3>
+                        <p>5-second memorization window for each level, training both quick perception and memory retention.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Performance Tracking</h3>
+                        <p>Visual progress tracking with instant feedback on your performance at each level.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play">
+            <div class="container">
+                <h2>How to Play</h2>
+                <div class="tips-list">
+                    <h3>Game Rules</h3>
+                    <ol>
+                        <li>The game consists of 20 increasingly challenging levels</li>
+                        <li>Each level displays a number for 5 seconds</li>
+                        <li>Memorize the number before it disappears</li>
+                        <li>Type the exact number you remembered</li>
+                        <li>Progress through all levels to test your memory capacity</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="scoring">
+            <div class="container">
+                <h2>Scoring System</h2>
+                <table class="scoring-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Digits</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1 digit</td>
+                            <td>5 points</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>10 digits</td>
+                            <td>50 points</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>20 digits</td>
+                            <td>100 points</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="text-align: center; margin-top: 20px;">Maximum score: 1050 points | Excellence threshold: 840 points</p>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <div class="container">
+                <h2>Benefits of Memory Training</h2>
+                <ul class="benefits">
+                    <li>Improves working memory capacity</li>
+                    <li>Enhances concentration and focus</li>
+                    <li>Boosts cognitive processing speed</li>
+                    <li>Helps with everyday memory tasks</li>
+                    <li>Supports learning and retention</li>
+                    <li>Provides mental stimulation</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
